@@ -38,19 +38,19 @@ include("header.php");
                         <div class="col-md-12">
                             <div class="card-box">
                                 <div class=" tilebox-one">
-                                    <!-- <i class="icon-layers float-right text-info"></i>
+                                    <i class="icon-layers float-right text-info"></i>
                                     <h6 class="text-muted text-uppercase m-b-20 text-info">Estimated Portfolio Value</h6>
                                     <div>
                                         <h2 class="m-b-20 d-inline" data-plugin="counterup">0.000</h2>
                                         <h2 class="m-b-20 d-inline">$</h2>
                                     </div>
-                                    <span class="text-muted p-t-20 d-inline">0.000000000 BTC</span> -->
+                                    <span class="text-muted p-t-20 d-inline">0.000000000 BTC</span>
                                     </div>
                                     <?php foreach ($data as $key => $value) { ?>
-                                    <div class="tilebox-one mt-3 pt-3">
-                                        <!-- <i class="fa fa-btc float-right  text-warning"></i> -->
+                                    <div class="tilebox-one border-top  mt-3 pt-3">
+                                        <img src="<?php  echo $value['image']?>" witdth="60" height="60" style="margin-right: -19px;margin-top: -2%" class=" float-right">
                                     <h6 class="text-muted text-uppercase m-b-20 text-warning"><?php echo $value['fullname'];?></h6>
-                                        <a href="<?php echo base_url();?>wallet" class="btn btn-info waves-effect waves-light w-sm d-inline btn-sm mb-2">Wallet</a>
+                                        <a href="<?php echo base_url();?>wallet/viewWallet/<?php echo  base64_encode($value['curr']);?>" class="btn btn-info waves-effect waves-light w-sm d-inline btn-sm mb-2">Wallet</a>
                                         <div>
                                             <h4 class="m-b-20 d-inline" data-plugin="counterup"><?php echo $value['balance'];?></h2>
                                                 <h5 class="m-b-20 d-inline "><?php echo $value['curr'];?></h2>
@@ -82,7 +82,6 @@ include("header.php");
                 </div>
                 <div class="col-sm-8">
                     <!-- data table for properties -->
-                    <h4 class="page-title">Propeties</h4>
                     <div class="row">
                         <!-- data table1 for properties -->
                         <div class="col-12">
@@ -120,7 +119,7 @@ include("header.php");
                             </div>
                         </div>
                         <!-- data table2 for properties -->
-                        <div class="col-12">
+                       <!--  <div class="col-12">
                             <div class="card-box table-responsive">
                                 <h4 class="m-t-0 header-title">My Property</h4>
                                 <p class="text-muted font-14 m-b-30">
@@ -153,14 +152,16 @@ include("header.php");
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- end row -->
-                    <h4 class="page-title">Last Transaction</h4>
+                   
                     <div class="row">
                         <!-- data table3 for properties -->
                         <div class="col-12">
+
                             <div class="card-box table-responsive">
+                                 <h4 class="page-title">Last Transaction</h4>
                                 <table id="key-table" class="table table-bordered">
                                     <thead>
                                         <tr>

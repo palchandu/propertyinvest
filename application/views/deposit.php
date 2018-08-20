@@ -32,13 +32,13 @@ include("header.php");
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="text-right">
-                                                                    <p class="d-inline-block">0.000000
-                                                                        <input type="text" class="form-control ml-2 d-inline-block w-50 text-center " placeholder="0">
+                                                                    <p class="d-inline-block"><?php echo $balance;?> <?php echo $coin_name;?>
+                                                                       <!--  <input type="text" class="form-control ml-2 d-inline-block w-50 text-center " placeholder="0"> -->
                                                                     </p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
+                                                     <!--    <div class="row">
                                                             <div class="col-md-6">
                                                                 <h5>
                                                                     <img src="./assets/images/pincode.png" witdth="60" height="60" style="margin-right: 10px;width: 8%;height: 2%;">Pin</h5>
@@ -63,7 +63,7 @@ include("header.php");
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,7 +78,7 @@ include("header.php");
                                             </div>
                                             <div class="text-left position-relative">
                                                 <small class=" text-capitalize m-b-15 m-t-10 text-muted">BTC DEPOSITE ADDRESS</small>
-                                                <p class="text-dark p-1 mb-0">15asd345asd0295sda020411000sad1</p>
+                                                <p class="text-dark p-1 mb-0"><?php echo $address;?></p>
                                                 <div class="text-right position-absolute" style="top: 6px;right: 6px;">
                                                     <button class="btn btn-custom waves-effect waves-light btn-sm" id="sa-image">
                                                         <i class="fas fa-qrcode"></i>
@@ -98,7 +98,7 @@ include("header.php");
                                     <div class=" tilebox-three">
                                         <div class="text-right">
                                             <p class="text-muted float-left d-inline mt-2">Make your deposit to start trading and fully use CoinFalcon</p>
-                                            <button type="button" class="btn d-inline btn-info waves-effect waves-light w-lg">Deposit</button>
+                                            <button type="button" class="btn d-inline btn-info waves-effect waves-light w-lg"><a href="<?php echo base_url();?>wallet/viewWallet/<?php echo  base64_encode($coin_name);?>" class="btn btn-info waves-effect waves-light w-sm d-inline btn-sm mb-2">Wallet</a></button>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mt-4">
@@ -109,7 +109,7 @@ include("header.php");
                                             <div class="text-right">
                                                 <h6 class="text-success text-uppercase m-b-15 m-t-10">Balance</h6>
                                                 <h2 class="m-b-10">
-                                                    <span data-plugin="counterup">2,562 BTC</span>
+                                                    <span data-plugin="counterup"><?php echo $balance;?> <?php echo $coin_name;?></span>
                                                 </h2>
                                             </div>
                                         </div>
@@ -317,21 +317,21 @@ include("header.php");
 
 
     <!-- jQuery  -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/popper.min.js"></script>
     <!-- Tether for Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/waves.js"></script>
-    <script src="assets/js/jquery.nicescroll.js"></script>
-    <script src="assets/plugins/switchery/switchery.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/waves.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.nicescroll.js"></script>
+    <script src="<?php echo base_url();?>assets/plugins/switchery/switchery.min.js"></script>
 
     <!-- App js -->
-    <script src="assets/js/jquery.core.js"></script>
-    <script src="assets/js/jquery.app.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.core.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.app.js"></script>
 
     <!-- Sweet Alert js -->
-    <script src="assets/plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
-    <script src="assets/pages/jquery.sweet-alert.init.js"></script>
+    <script src="<?php echo base_url();?>assets/plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
+    <script src="<?php echo base_url();?>assets/pages/jquery.sweet-alert.init.js"></script>
 
 </body>
 

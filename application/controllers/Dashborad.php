@@ -14,13 +14,14 @@ class Dashborad extends MY_Controller {
 
 	public function index()
 	{
-		$arrCurr=array('BTC','ETH','PIN');
+		
+        $arrCurr=array('BTC','ETH','PIN');
 		$info="";
 		foreach ($arrCurr as $key => $valueCurr) {
 			$rpc_det=$this->getRPC($valueCurr);
 			$client= new Client($rpc_det[0]['host'], $rpc_det[0]['port'], $rpc_det[0]['user'], $rpc_det[0]['pass']);
         	$bal=$client->getBalance('priyankagarg1112@gmail.com');
-        	$data[]=array('curr' =>$valueCurr,'balance'=>$bal,'fullname'=>$rpc_det[0]['curr_name']);
+        	$data[]=array('curr' =>$valueCurr,'balance'=>$bal,'fullname'=>$rpc_det[0]['curr_name'],'image'=>$rpc_det[0]['image']);
 		}
 		$info['data']=$data;
 		//print_r($rpc_det[0]['host']);

@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 include("header.php");
+
 ?>
 
     <!-- ============================================================== -->
@@ -24,30 +25,43 @@ include("header.php");
                                         <div class="text-right">
                                             <h5 class=" text-capitalize m-b-15 m-t-10">Make your first deposit</h5>
                                             <p class="text-muted">Make your deposit to start trading and fully use CoinFalcon</p>
-                                            <button type="button" class="btn btn-info waves-effect waves-light w-lg"><a href="<?php echo base_url();?>deposit">Deposit</a></button>
+                                            <button type="button" class="btn btn-info waves-effect waves-light w-lg"><a href="<?php echo base_url();?>deposit/viewDeposit/<?php echo  base64_encode('BTC');?>">Deposit</a></button>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                       
+                                    <form id="withdrawform" action="<?php echo base_url();?>wallet/sendcurrency" method="POST">
+                                    <div class="col-md-12"> 
                                         <div class="card-box tilebox-two mt-3">
-                                            <i class="fa fa-btc float-right text-muted"></i>
+                                             <?php if($this->session->flashdata('success')){ ?>
+                                        <div class="alert alert-block alert-success">
+                                        <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+                                        <strong>Success!</strong> <?php echo $this->session->flashdata('success'); ?>
+                                        </div>
+                                        <?php }else if($this->session->flashdata('error')){  ?>
+                                        <div class="alert alert-block alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+                                        <strong>Error!</strong> <?php echo $this->session->flashdata('error'); ?>
+                                        </div>
+                                        <?php } ?>
                                             <h6 class="text-primary text-uppercase m-b-15 m-t-10">BTC Withdraw Address</h6>
-                                            <p class="m-b-10">Paste your withdraw address here..</p>
+                                           <input type="text" name="address" placeholder="Paste your withdraw address here.." class="form-control"></input>
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
                                         <div class="card-box m-b-20 tilebox-two bg-white ">
                                             <h6 class="d-inline">Amount</h6>
-                                            <p class="d-inline float-right text-info">0.0000000</p>
+                                           <input type="text" name="amount" placeholder="0.000000" class="form-control"></input>
                                         </div>
                                     </div>
                                      <div class="col-xs-12">
                                         <div class="card-box m-b-20 tilebox-two bg-white border border-danger" style="border-style:dashed!important">
                                             <h6 class="d-inline">Fee</h6>
-                                            <p class="d-inline float-right text-info">0.006 BTC</p>
+                                            <p class="d-inline float-right text-info">0.001 BTC</p>
                                         </div>
                                     </div>
                                 </div>
-                            <a href="#" class="btn btn-info btn-lg btn-block">Widthdraw</a></div>
+                            <button type="submit" class="btn btn-info btn-lg btn-block">Widthdraw</button></div>
+                            </form>
                         </div>
                         <div class="col-sm-6 col-xs-12">
                             <div class="card m-b-20">
