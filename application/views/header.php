@@ -26,9 +26,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Switchery css -->
     <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+    <script src="assets/js/modernizr.min.js"></script>
+
+    <!-- Sweet Alert css -->
+    <link href="assets/plugins/bootstrap-sweetalert/sweet-alert.css" rel="stylesheet" type="text/css" />
+
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 
     <!-- App CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />

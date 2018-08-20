@@ -9,63 +9,66 @@ include("header.php");
     <div class="wrapper">
         <div class="container">
 
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="btn-group pull-right m-t-15">
-                        <button type="button" class="btn btn-custom dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings
-                            <span class="m-l-5">
-                                <i class="fa fa-cog"></i>
-                            </span>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-
             <div class="row">
                 <div class="col-12">
                     <h4 class="m-t-20 m-b-20">Wallet</h4>
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
                             <div class="card m-b-20">
-                                <h6 class="card-header bg-warning text-white text-capitalize">Withdraw  Currency</h6>
+                                <h6 class="card-header  text-white text-capitalize" style="background:#A1DDEE">Withdraw  Currency</h6>
                                 <div class="card-body">
                                     <div class=" tilebox-three">
-                                        <div class="bg-icon float-left">
-                                            <i class=" icon-wallet"></i>
+                                        <div class="h1 float-left text-white rounded-circle bg-icon bg-info">
+                                            <i class="fa fa-arrow-down text-white"></i>
                                         </div>
                                         <div class="text-right">
-                                            <h4 class=" text-uppercase m-b-15 m-t-10">Make your first deposit</h4>
-                                            <span class="text-muted">Make your deposit to start trading and fully use CoinFalcon</span>
+                                            <h5 class=" text-capitalize m-b-15 m-t-10">Make your first deposit</h5>
+                                            <p class="text-muted">Make your deposit to start trading and fully use CoinFalcon</p>
+                                            <button type="button" class="btn btn-info waves-effect waves-light w-lg"><a href="<?php echo base_url();?>deposit">Deposit</a></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="card-box tilebox-two mt-3">
+                                            <i class="fa fa-btc float-right text-muted"></i>
+                                            <h6 class="text-primary text-uppercase m-b-15 m-t-10">BTC Withdraw Address</h6>
+                                            <p class="m-b-10">Paste your withdraw address here..</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="card-box m-b-20 tilebox-two bg-white ">
+                                            <h6 class="d-inline">Amount</h6>
+                                            <p class="d-inline float-right text-info">0.0000000</p>
+                                        </div>
+                                    </div>
+                                     <div class="col-xs-12">
+                                        <div class="card-box m-b-20 tilebox-two bg-white border border-danger" style="border-style:dashed!important">
+                                            <h6 class="d-inline">Fee</h6>
+                                            <p class="d-inline float-right text-info">0.006 BTC</p>
                                         </div>
                                     </div>
                                 </div>
-                            <a href="#" class="btn btn-primary btn-lg btn-block">Go somewhere</a></div>
+                            <a href="#" class="btn btn-info btn-lg btn-block">Widthdraw</a></div>
                         </div>
                         <div class="col-sm-6 col-xs-12">
                             <div class="card m-b-20">
-                                <h6 class="card-header bg-warning text-white text-capitalize">Information</h6>
+                                <h6 class="card-header  text-white text-capitalize" style="background:#A1DDEE">Information</h6>
                                 <div class="card-body">
                                     <div class=" tilebox-three">
-                                        <div class="bg-icon float-left">
-                                            <i class=" icon-wallet"></i>
+                                        <div class="h1 float-left text-white rounded-circle bg-icon" style="background:#A1DDEE">
+                                            <i class="fa fa-btc  text-white"></i>
                                         </div>
                                         <div class="text-right">
-                                            <h4 class=" text-uppercase m-b-15 m-t-10">Make your first deposit</h4>
-                                            <span class="text-muted">Make your deposit to start trading and fully use CoinFalcon</span>
+                                            <h5 class=" text-capitalize m-b-15 m-t-10">Make your first deposit</h5>
+                                            <p class="text-muted">Make your deposit to start trading and fully use CoinFalcon</p>
+                                            <button type="button" class="btn btn-info waves-effect waves-light w-lg"><a href="<?php echo base_url();?>deposit">Deposit</a></button>
                                         </div>
                                     </div>
                                 </div>
-                            <a href="#" class="btn btn-primary btn-lg btn-block">Go somewhere</a></div>
+                                <ul class="pb-0 border-top">
+                                    <li class="text-secondary pt-4 pr-2"> Do not widthdraw directly to a crowdfund or ICO. We will not credit your account with tokens from that sale.</li>
+                                    <li class="list-group-item h6 border-0 mt-2"><i class="fa fa-question-circle-o pr-2"></i>FAQ</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
